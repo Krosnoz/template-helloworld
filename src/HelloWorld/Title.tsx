@@ -20,8 +20,7 @@ const word: React.CSSProperties = {
 
 export const Title: React.FC<{
   readonly titleText: string;
-  readonly titleColor: string;
-}> = ({ titleText, titleColor }) => {
+}> = ({ titleText }) => {
   const videoConfig = useVideoConfig();
   const frame = useCurrentFrame();
 
@@ -43,9 +42,9 @@ export const Title: React.FC<{
         return (
           <span
             key={t}
+            className="text-primary"
             style={{
               ...word,
-              color: titleColor,
               transform: `scale(${scale})`,
             }}
           >
